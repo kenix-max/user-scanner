@@ -8,7 +8,10 @@ import time
 from colorama import Fore, Style
 from itertools import islice
 from dataclasses import replace
+import sys
+from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from user_scanner.cli.banner import print_banner
 from user_scanner.cli.tips import print_loud_skip_tip, print_proxy_tip, print_web_app_tip
 from user_scanner.core import formatter
